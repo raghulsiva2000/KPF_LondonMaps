@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>London Building Footprints — OS MasterMap Viewer</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="map"></div>
+
+<div id="loadingIndicator" class="status-indicator">Loading building data&hellip;</div>
+<div id="errorIndicator" class="status-indicator error-indicator" hidden></div>
+
+<div class="panel toggle-panel" id="togglePanel" hidden>
+  <div class="panel-title">Colour Mode</div>
+  <div class="toggle-group" role="group" aria-label="Coloring mode toggle">
+    <button class="toggle-btn active" id="btnByUse" data-mode="use">By Use</button>
+    <button class="toggle-btn" id="btnByHeight" data-mode="height">By Height</button>
+  </div>
+</div>
+
+<div class="panel legend-panel" id="legendPanel" hidden>
+  <div class="panel-title" id="legendTitle">Legend — Building Use</div>
+  <div id="legendBody"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
